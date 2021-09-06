@@ -8,7 +8,8 @@ const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 
-const openModal = function () {
+const openModal = function (e) {
+  e.preventDefault();
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
 };
@@ -29,3 +30,19 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+//Select
+console.log(document.documentElement);
+console.log(document.head);
+console.log(document.body);
+
+const haeder = document.querySelector('.header');
+
+const allSections = document.querySelectorAll('.section');
+console.log(allSections); //Nodelist
+
+const allButtons = document.getElementsByClassName('btn');
+
+console.log(allButtons); //Html Collection
+
+document.getElementsByTagName('button');
